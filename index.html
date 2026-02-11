@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Happy Valentine’s Day ❤️🥂</h1>
+    <p class="subtitle">Sona tried something to impress engineer baby 🫣</p>
+    <p class="question">Wanna check it out?</p>
+
+    <div class="input-row">
+      <input type="password" id="password" placeholder="Enter password">
+      <button class="btn-yes" onclick="checkPassword()">Unlock</button>
+    </div>
+
+    <p class="hint">Hint: your favourite nickname that I gave you 😉</p>
+
+    <div class="btn-row">
+      <button class="btn-no" onclick="window.location.href='maarungi.html'">
+        No I don’t wanna check it out
+      </button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+<script>
+  const correctPassword = "babyboy";
+
+  function checkPassword() {
+    const pass = document.getElementById("password").value.trim().toLowerCase();
+
+    if(pass === correctPassword) {
+      window.location.href = "memories.html";
+    } else {
+      wrongPasswordShake();
+    }
+  }
+
+  document.getElementById("password").addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+      checkPassword();
+    }
+  });
+</script>
+
+</body>
+</html>

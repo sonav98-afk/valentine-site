@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anniversary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="back-btn" onclick="goBack()">← Back</button>
+
+<div class="container">
+  <h2 class="question">Click on our anniversary 💕</h2>
+  <h1 class="page-title" style="font-size:40px;">October</h1>
+
+  <div class="calendar" id="calendar"></div>
+
+  <div class="btn-row">
+    <button class="btn-yes" id="nextBtn" disabled style="opacity:0.4;">
+      Next ➝
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  const calendar = document.getElementById("calendar");
+  const nextBtn = document.getElementById("nextBtn");
+
+  for(let i=1; i<=31; i++) {
+    const day = document.createElement("div");
+    day.classList.add("day");
+    day.textContent = i;
+
+    day.onclick = () => {
+      if(i === 25) {
+        day.classList.add("correct");
+        nextBtn.disabled = false;
+        nextBtn.style.opacity = "1";
+        nextBtn.onclick = () => window.location.href = "dance.html";
+      } else {
+        wrongPasswordShake();
+      }
+    };
+
+    calendar.appendChild(day);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("assets/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  padding: 25px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.title {
+  font-family: "Great Vibes", cursive;
+  font-size: 42px;
+  margin: 0;
+  color: #7a0019; /* velvety red */
+  text-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.question {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+.hint {
+  font-size: 13px;
+  margin-top: 8px;
+  opacity: 0.85;
+}
+
+.btn-row {
+  margin-top: 18px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-yes {
+  background: #c2183a;
+  color: white;
+}
+
+.btn-no {
+  background: #111;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.page-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ff7aa5;
+}
+
+.memory-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 18px;
+}
+
+.memory-block img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.caption {
+  flex: 1;
+  margin-left: 25px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  color: gold;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.day {
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.day:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.correct {
+  background: #c2183a !important;
+  border-radius: 50%;
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-8px); }
+  100% { transform: translateX(0); }
+}
+
+.video-box {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: black;
+  border-radius: 16px;
+}
+
+.two-pics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.two-pics img {
+  width: 100%;
+  max-width: 260px;
+  margin: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.middle-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.memory-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.memory-block:nth-child(even) .caption {
+  margin-left: 0;
+  margin-right: 25px;
+  text-align: center;
+}
+
